@@ -1,0 +1,9 @@
+<svg width="100%" height="80px" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+ 
+  <path 
+        d="M 0 0 L 400 0 L 200 400 z"
+        fill="purple" 
+        stroke="purple" 
+        stroke-width="10" />
+ 
+</svg>

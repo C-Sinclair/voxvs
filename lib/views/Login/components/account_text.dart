@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:voxvs/constants.dart';
 import 'package:voxvs/views/Login/login_screen.dart';
 import 'package:voxvs/views/Signup/signup_screen.dart';
 
@@ -18,9 +17,11 @@ class AccountText extends StatelessWidget {
           Text(
             isLogin ? "Don't have an account?" : "Already have an account?",
             style: TextStyle(
-              color: Colours.primary,
+              color: Colors.white,
+              fontSize: 20,
             ),
           ),
+          SizedBox(width: 10),
           GestureDetector(
             onTap: () => Navigator.push(
               context,
@@ -31,9 +32,9 @@ class AccountText extends StatelessWidget {
             child: Text(
               isLogin ? "Sign up" : "Log in",
               style: TextStyle(
-                color: Colours.primary,
-                fontWeight: FontWeight.bold,
-              ),
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22),
             ),
           )
         ],

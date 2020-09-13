@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:voxvs/components/rounded_button.dart';
 import 'package:voxvs/components/background.dart';
-import 'package:voxvs/components/rounded_textfield.dart';
-import 'package:voxvs/constants.dart';
-import 'package:voxvs/views/Login/components/account_text.dart';
+import 'package:voxvs/views/Signup/components/form.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -16,29 +13,8 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Background(
+        logo: true,
         child: Container(
-      width: size.width,
-      height: size.height,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          RoundedTextField(
-            hintText: "Email",
-            onChanged: (value) {},
-          ),
-          RoundedTextField(
-              hintText: "Password",
-              icon: Icons.lock,
-              onChanged: (value) {},
-              password: true),
-          RoundedButton(
-            text: "SIGNUP",
-            onpress: () {},
-            colour: Colours.fifthary,
-          ),
-          AccountText(isLogin: false)
-        ],
-      ),
-    ));
+            width: size.width, height: size.height, child: SignupForm()));
   }
 }

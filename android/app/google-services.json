@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "627140183419",
+    "firebase_url": "https://voxvs-1a3c1.firebaseio.com",
+    "project_id": "voxvs-1a3c1",
+    "storage_bucket": "voxvs-1a3c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627140183419:android:dd6ddd7c6161ab584c69de",
+        "android_client_info": {
+          "package_name": "software.sinclair.voxvs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627140183419-57s5b97131gp3gv0gbsq76k3ba4qs11r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW7vV0OVYViT6YvbSKLZl93GvCcLZC80Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627140183419-57s5b97131gp3gv0gbsq76k3ba4qs11r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

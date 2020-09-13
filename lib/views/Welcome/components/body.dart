@@ -8,8 +8,8 @@ import 'package:voxvs/views/Signup/signup_screen.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Background(
+      logo: true,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
