@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:voxvs/views/Error/error_screen.dart';
+import 'package:voxvs/views/Home/home_screen.dart';
 import 'package:voxvs/views/Loading/loading_screen.dart';
 import 'package:voxvs/views/Welcome/welcome_screen.dart';
 import 'package:voxvs/constants.dart';
@@ -18,7 +20,7 @@ class App extends StatelessWidget {
       title: 'Voxvs',
       theme: ThemeData(
           primaryColor: Colours.primary,
-          scaffoldBackgroundColor: Colors.indigo[600]),
+          scaffoldBackgroundColor: Colors.transparent),
       home: Initializer(),
     );
   }
@@ -36,7 +38,9 @@ class Initializer extends StatelessWidget {
           return ErrorScreen();
         }
         if (snapshot.connectionState == ConnectionState.done) {
-          return WelcomeScreen();
+          return FirebaseAuth.instance.currentUser != null
+              ? HomeScreen()
+              : WelcomeScreen();
         }
         return LoadingScreen();
       },

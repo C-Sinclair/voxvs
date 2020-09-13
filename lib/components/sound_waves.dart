@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:ui';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:voxvs/constants.dart';
 
 class Vibes {
   final double height;
@@ -96,16 +95,16 @@ class WavesPainter extends CustomPainter {
 }
 
 class Waves extends StatefulWidget {
-  final state = new WavesState();
+  final state = new _WavesState();
   @override
-  WavesState createState() => state;
+  _WavesState createState() => state;
 
   void changeWaves() {
     state.changeWave();
   }
 }
 
-class WavesState extends State<Waves> with TickerProviderStateMixin {
+class _WavesState extends State<Waves> with TickerProviderStateMixin {
   static const size = const Size(100.0, 5.0);
   final random = Random();
 
@@ -155,6 +154,7 @@ class WavesState extends State<Waves> with TickerProviderStateMixin {
   @override
   void dispose() {
     animation.dispose();
+    timer.cancel();
     super.dispose();
   }
 }

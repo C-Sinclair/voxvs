@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:voxvs/components/controlled_textfield.dart';
 import 'package:voxvs/components/rounded_button.dart';
@@ -29,12 +30,18 @@ class _SignupFormState extends State<SignupForm> {
 
   void _signup() async {
     try {
+      String email = _emailController.text;
       UserCredential credential = await _auth.createUserWithEmailAndPassword(
-        email: _emailController.text,
+        email: email,
         password: _passwordController.text,
       );
       final User user = credential.user;
       if (user != null) {
+        String uid = user.uid;
+        FirebaseFirestore.instance.collection("accounts").add({
+          "uid": uid,
+          "email": email,
+        });
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => HomeScreen()));
       } else {
